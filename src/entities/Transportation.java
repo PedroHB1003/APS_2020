@@ -2,26 +2,18 @@ package entities;
 
 public class Transportation {
 
-	double car,taxi,bus,subway,plane,gasoline,gasolineA,gasolineP,ethanol,ethanolA,diesel,dieselA,biodisel,gnv,electric;
+	//Implementar como atributos ou como métodos?
+	private Double car,taxi,bus,subway,plane;
+	//Valores ainda não definidos para as constantes
+	private static final Double AVIATION_GASOLINE = 0.0, ETHANOL = 0.0, BIODIESEL = 0.0, DIESEL = 0.0, GASOLINE = 0.0, GNV = 0.0;
 
-	public Transportation(double car, double taxi, double bus, double subway, double plane, double gasoline,
-			double gasolineA, double gasolineP, double ethanol, double ethanolA, double diesel, double dieselA,
-			double biodisel, double gnv, double electric) {
+	public Transportation() {
+	}
+	public Transportation(double car, double taxi, double bus, double subway, double plane) {
 		this.car = car;
 		this.taxi = taxi;
 		this.bus = bus;
 		this.subway = subway;
 		this.plane = plane;
-		this.gasoline = gasoline;
-		this.gasolineA = gasolineA;
-		this.gasolineP = gasolineP;
-		this.ethanol = ethanol;
-		this.ethanolA = ethanolA;
-		this.diesel = diesel;
-		this.dieselA = dieselA;
-		this.biodisel = biodisel;
-		this.gnv = gnv;
-		this.electric = electric;
 	}
-	//a lista de atributos esta grande e � proposital, muitas calculadoras de pegada carbonica carecem em variedade
 }

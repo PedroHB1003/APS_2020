@@ -2,5 +2,5 @@ package entities;
 
 public class ServicesAndGoods {
 
-	//nada por enquanto
+	//Nada por enquanto
 }

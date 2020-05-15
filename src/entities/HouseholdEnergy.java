@@ -2,13 +2,9 @@ package entities;
 
 public class HouseholdEnergy {
 
-	double eletricity,gas,oil,propane;
-	//propane È g·s de cozinha
+	//Valores ainda n√£o definidos para as constantes
+	private static final Double ELETRICITY = 0.0, GAS = 0.0, OIL = 0.0, PROPANE = 0.0;
 	
-	public HouseholdEnergy(double eletricity, double gas, double oil, double propane) {
-		this.eletricity = eletricity;
-		this.gas = gas;
-		this.oil = oil;
-		this.propane = propane;
+	public HouseholdEnergy() {
 	}
 }
