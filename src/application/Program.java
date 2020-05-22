@@ -6,5 +6,4 @@ public class Program {
 		
 		//Implementação em análise
 	}
-
 }
