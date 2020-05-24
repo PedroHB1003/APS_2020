@@ -2,39 +2,28 @@ package entities;
 
 public class EmissionFactors {
 
-    private static final Double AVIATION_GASOLINE = null;
-    private static final Double ETHANOL = null;
-    private static final Double BIODIESEL = null;
-    private static final Double DIESEL = null;
+    private static final Double BIODIESEL = 0.81; //kgCO2e/litro
+    private static final Double DIESEL = 2.79; //kgCO2e/litro
     private static final Double GASOLINE = null;
-    private static final Double GNV = null;
-    private static final Double ELETRICITY = null;
-    private static final Double GAS = null;
-    private static final Double OIL = null;
-    private static final Double PROPANE = null;
-    private static final Double NATURAL_GAS = null;
-    private static final Double WASTE = null;
-    private static final Double WATER = null;
-    private static final Double LGP = null; //Gás liquefeito de petróleo, pode ser utilizado como gás de cozinha
-    private static final Double BEEF = 60.0;
-    private static final Double CHEESE = 21.0;
-    private static final Double COFFEE = 17.0;
-    private static final Double PIG_MEAT = 7.0;
-    private static final Double POULTRY_MEAT = 6.0;
-    private static final Double FISH = 5.0;
-    private static final Double EGGS = 4.5;
-    private static final Double RICE = 4.0;
-    private static final Double MILK = 3.0;
-    private static final Double FRUITS = 1.4;
-    private static final Double VEGETABLES = 0.4;
+    private static final Double ELETRICITY = 0.11; //kgCO2e/kWh
+    private static final Double GAS = 0.19; //kgCO2e/kWh
+    private static final Double FUEL_OIL = 3.19; //kgCO2e/litro
+    private static final Double NATURAL_GAS = 0.21; //kgCO2e/kWh
+    private static final Double WASTE = 0.01467; //kgCO2e/kg
+    private static final Double WATER = 0.00003; //kgCO2e/litro
+    private static final Double LGP = 1.69; //kgCO2e/litro - Gás liquefeito de petróleo, pode ser utilizado como gás de cozinha
+    private static final Double BEEF = 60.0; //kgCO2e/kg
+    private static final Double CHEESE = 21.0; //kgCO2e/kg
+    private static final Double COFFEE = 17.0; //kgCO2e/kg
+    private static final Double PIG_MEAT = 7.0; //kgCO2e/kg
+    private static final Double POULTRY_MEAT = 6.0; //kgCO2e/kg
+    private static final Double FISH = 5.0; //kgCO2e/kg
+    private static final Double EGGS = 4.5; //kgCO2e/kg
+    private static final Double RICE = 4.0; //kgCO2e/kg
+    private static final Double MILK = 3.0; //kgCO2e/kg
+    private static final Double FRUITS = 1.4; //kgCO2e/kg
+    private static final Double VEGETABLES = 0.4; //kgCO2e/kg
 
-
-    public static Double getAviationGasoline() {
-        return AVIATION_GASOLINE;
-    }
-    public static Double getEthanol() {
-        return ETHANOL;
-    }
     public static Double getBiodiesel() {
         return BIODIESEL;
     }
@@ -44,20 +33,14 @@ public class EmissionFactors {
     public static Double getGasoline() {
         return GASOLINE;
     }
-    public static Double getGnv() {
-        return GNV;
-    }
     public static Double getEletricity() {
         return ELETRICITY;
     }
     public static Double getGas() {
         return GAS;
     }
-    public static Double getOil() {
-        return OIL;
-    }
-    public static Double getPropane() {
-        return PROPANE;
+    public static Double getFuelOil() {
+        return FUEL_OIL;
     }
     public static Double getNaturalGas() {
         return NATURAL_GAS;

@@ -35,18 +35,21 @@ public class Housing {
 		this.amountPeople = amountPeople;
 	}
 	public void eletricity(Double use) {
-		housingFootprint += use * EmissionFactors.getEletricity();
+		housingFootprint += use * 12 * EmissionFactors.getEletricity() / getAmountPeople();
 	}
 	public void naturalGas(Double use) {
-		housingFootprint += use * EmissionFactors.getNaturalGas();
+		housingFootprint += use * 12 * EmissionFactors.getNaturalGas() / getAmountPeople();
+	}
+	public void fuelOil(Double use) {
+		housingFootprint += use * 12 * EmissionFactors.getFuelOil() / getAmountPeople();
 	}
 	public void lgp(Double use) {
-		housingFootprint += use * EmissionFactors.getLgp();
+		housingFootprint += use * 12 * EmissionFactors.getLgp() / getAmountPeople();
 	}
 	public void waste(Double use) {
-		housingFootprint += use * EmissionFactors.getWaste();
+		housingFootprint += use * 52 * EmissionFactors.getWaste() / getAmountPeople(); //Esse método irá pegar a quantidade de desperdício em quilos por semana e multiplar por 52 semanas (1 ano)
 	}
 	public void water(Double use) {
-		housingFootprint += use * EmissionFactors.getWater();
+		housingFootprint += use * 365 * EmissionFactors.getWater() / getAmountPeople(); //Consumo diário de água
 	}
 }

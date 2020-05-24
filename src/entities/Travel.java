@@ -27,9 +27,6 @@ public class Travel {
 		this.travelFootprint = travelFootprint;
 	}
 	//Implementar como métodos!
-	public void carEthanol(Double distance) {
-		travelFootprint += distance * EmissionFactors.getEthanol();
-	}
 	public void carBiodiesel(Double distance) {
 		travelFootprint += distance * EmissionFactors.getBiodiesel();
 	}
@@ -39,9 +36,6 @@ public class Travel {
 	public void carGasoline(Double distance) {
 		travelFootprint += distance * EmissionFactors.getGasoline();
 	}
-	public void carGnv(Double distance) {
-		travelFootprint += distance * EmissionFactors.getGnv();
-	}
 	public void carUberTaxi(Double distance) {
 		travelFootprint += distance * 0; //Fator de emissão a ser definido
 	}
@@ -50,8 +44,5 @@ public class Travel {
 	}
 	public void metro(Double distance) {
 		travelFootprint += distance * 0; ////Fator de emissão e quantidade média de pessoas em uma viagem de metrô a serem definidos
-	}
-	public void airPlane(Double distance) {
-		travelFootprint += distance * 1.09 * EmissionFactors.getAviationGasoline();
 	}
 }
