@@ -43,6 +43,6 @@ public class Travel {
 		travelFootprint += distance * 0; //Fator de emissão e quantidade média de pessoas em uma viagem de ônibus a serem definidos
 	}
 	public void metro(Double distance) {
-		travelFootprint += distance * 0; ////Fator de emissão e quantidade média de pessoas em uma viagem de metrô a serem definidos
+		travelFootprint += distance * 0; //Fator de emissão e quantidade média de pessoas em uma viagem de metrô a serem definidos
 	}
 }

@@ -4,7 +4,7 @@ public class EmissionFactors {
 
     private static final Double BIODIESEL = 0.81; //kgCO2e/litro
     private static final Double DIESEL = 2.79; //kgCO2e/litro
-    private static final Double GASOLINE = null;
+    private static final Double GASOLINE = 2.3; //kgCO2e/litro
     private static final Double ELETRICITY = 0.11; //kgCO2e/kWh
     private static final Double GAS = 0.19; //kgCO2e/kWh
     private static final Double FUEL_OIL = 3.19; //kgCO2e/litro
