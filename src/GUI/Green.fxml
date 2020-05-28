@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GreenController">
+   <children>
+      <AnchorPane layoutX="235.0" prefHeight="430.0" prefWidth="465.0">
+         <children>
+            <Pane fx:id="pnl_aereas" layoutX="10.0" layoutY="10.0" prefHeight="440.0" prefWidth="485.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Viagens Aéreas">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_dieta" layoutX="10.0" layoutY="10.0" prefHeight="450.0" prefWidth="495.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Dieta">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_casa" layoutX="94.0" layoutY="52.0" prefHeight="430.0" prefWidth="465.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Casa">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_publico" layoutX="10.0" layoutY="10.0" prefHeight="440.0" prefWidth="485.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Transporte Público">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_particular" layoutX="10.0" layoutY="10.0" prefHeight="430.0" prefWidth="475.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Transporte Particular">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="combustivelChooser" layoutX="130.0" layoutY="76.0" prefWidth="150.0" />
+                  <Label layoutX="28.0" layoutY="76.0" prefHeight="25.0" prefWidth="102.0" text="Combustivel:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="121.0" prefHeight="29.0" prefWidth="161.0" text="Quilometragem média:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtQulometragem" layoutX="189.0" layoutY="123.0" prefHeight="25.0" prefWidth="73.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="272.0" layoutY="123.0" prefHeight="25.0" prefWidth="36.0" text="Km">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="430.0" prefWidth="236.0" style="-fx-background-color: #33FF33;">
+         <children>
+            <VBox prefHeight="228.0" prefWidth="236.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="248.0" text="GreenCalculator">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_casa" alignment="CENTER" mnemonicParsing="false" onAction="#btnAction" prefHeight="32.0" prefWidth="239.0" styleClass=".button" stylesheets="@../CSS/style.css" text="Casa" underline="true">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_particular" alignment="CENTER" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="32.0" prefWidth="245.0" styleClass=".button" stylesheets="@../CSS/style.css" text="Transporte Particular" underline="true">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_publico" alignment="CENTER" layoutX="15.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="32.0" prefWidth="245.0" styleClass=".button" stylesheets="@../CSS/style.css" text="Transporte Público" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_aereas" alignment="CENTER" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="32.0" prefWidth="245.0" styleClass=".button" stylesheets="@../CSS/style.css" text="Viagens Aéreas" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_dieta" alignment="CENTER" layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="32.0" prefWidth="245.0" styleClass=".button" stylesheets="@../CSS/style.css" text="Dieta" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutY="244.0" prefHeight="186.0" prefWidth="236.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="236.0" text="Resultado pegada de Carbono:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtResult" editable="false">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="btnCalcular" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #A0A0A0;" text="Calcular!">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="65.0" top="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnCalcular1" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="93.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="70.0" style="-fx-background-color: #FF3333;" text="Reset">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="80.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
