@@ -25,4 +25,13 @@ public class Food {
 	public void setFoodFootprint(Double foodFootprint) {
 		this.foodFootprint = foodFootprint;
 	}
+	public void balancedDiet(Double consumption) {
+		foodFootprint+= consumption * 50.2;
+	}
+	public void basicDiet(Double consumption) {
+		foodFootprint += consumption * 36.5;
+	}
+	public void veganDiet(Double consumption) {
+		foodFootprint += consumption * 7.8;
+	}
 }
