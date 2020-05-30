@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 
 
 public class GreenController implements Initializable {
@@ -70,6 +71,8 @@ public class GreenController implements Initializable {
 	    pnl_dieta.toFront();
 	}
 	
+	
+	
 	//Botões Calcular total e reset
 	if (event.getSource() == btnCalcular) {
 	    result = resultParticular + resultPublico + resultCasa + resultDieta;
@@ -85,6 +88,7 @@ public class GreenController implements Initializable {
 	    
 	    txtResult.setText("");
 	}
+	
 	
 	
 	// Pane Casa
@@ -171,7 +175,6 @@ public class GreenController implements Initializable {
 		distancePublic = 0.0;
 	    }
 	    
-	    
 	    if (publicoChooser.getSelectionModel().getSelectedItem() == "Ônibus") {
 		resultPublico = (distancePublic * EmissionFactors.GASOLINE * 12)/20;
 	    }
@@ -182,8 +185,23 @@ public class GreenController implements Initializable {
 	    String str3Double = String.format("%.2f", resultPublico);
 	    lblResultPublico.setText(str3Double + " KG de CO2 por ano");
 	}
+	
+	
+	
+	if (event.getSource() == btnResultDieta) {
+	    if (radioDieta1.isSelected()) {
+		resultDieta = 12 * 36.5;
+	    } else if (radioDieta2.isSelected()) {
+		resultDieta = 12 * 50.2;
+	    } else if (radioDieta3.isSelected()) {
+		resultDieta = 12 * 7.8;
+	    }
+	    
+	    String str4Double = String.format("%.2f", resultDieta);
+	    lblResultDieta.setText(str4Double + " KG de CO2 por ano");
+	}
     }
-    
+
     
     // Interface Casa
     @FXML
@@ -220,7 +238,12 @@ public class GreenController implements Initializable {
     private Button btnResultPublico;
     
     // Interface Dieta
-    
+    @FXML
+    private Button btnResultDieta;
+    @FXML
+    private Label lblResultDieta;
+    @FXML
+    private RadioButton radioDieta1, radioDieta2, radioDieta3;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -230,29 +253,6 @@ public class GreenController implements Initializable {
 	
 	//Pane Transporte público, setando informações
 	publicoChooser.setValue("Ônibus");
-	publicoChooser.setItems(publicoChooserList);
+	publicoChooser.setItems(publicoChooserList);	
     }    
 } 
-
-
-
-/*     private void configureCheckBox(CheckBox checkBox) {
-
-	if (checkBox.isSelected()) {
-	    selectedCheckBoxes.add(checkBox);
-	} else {
-	    unselectedCheckBoxes.add(checkBox);
-	}
-
-	checkBox.selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
-	    if (isNowSelected) {
-		unselectedCheckBoxes.remove(checkBox);
-		selectedCheckBoxes.add(checkBox);
-	    } else {
-		selectedCheckBoxes.remove(checkBox);
-		unselectedCheckBoxes.add(checkBox);
-	    }
-
-	});
-    }
-*/

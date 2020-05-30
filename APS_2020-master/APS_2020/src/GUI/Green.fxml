@@ -25,6 +25,34 @@
                   </Label>
                </children>
             </Pane>
+            <Pane fx:id="pnl_publico" layoutX="10.0" layoutY="10.0" prefHeight="440.0" prefWidth="485.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Transporte Público">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="publicoChooser" layoutX="243.0" layoutY="75.0" prefHeight="0.0" prefWidth="150.0" />
+                  <Label layoutX="31.0" layoutY="75.0" prefHeight="25.0" prefWidth="212.0" text="Escolha o meio de transporte:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="130.0" prefHeight="25.0" prefWidth="226.0" text="Média de quilometragem mensal:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPublico" layoutX="291.0" layoutY="130.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="393.0" layoutY="130.0" prefHeight="25.0" prefWidth="36.0" text="Km" />
+               </children>
+            </Pane>
+            <Label fx:id="lblResultPublico" alignment="CENTER" layoutX="139.0" layoutY="409.0" prefHeight="17.0" prefWidth="212.0" text="0.0 KG de CO2 por ano" />
+            <Button fx:id="btnResultPublico" layoutX="184.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="25.0" prefWidth="123.0" text="Calcular pegada!">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
             <Pane fx:id="pnl_particular" layoutX="10.0" layoutY="10.0" prefHeight="430.0" prefWidth="475.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Transporte Particular">
@@ -98,34 +126,6 @@
                   <TextField fx:id="txtPessoasCasa" layoutX="373.0" layoutY="215.0" prefHeight="25.0" prefWidth="61.0" />
                </children>
             </Pane>
-            <Pane fx:id="pnl_publico" layoutX="10.0" layoutY="10.0" prefHeight="440.0" prefWidth="485.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="76.0" prefWidth="465.0" text="Transporte Público">
-                     <font>
-                        <Font name="Arial Bold" size="20.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox fx:id="publicoChooser" layoutX="243.0" layoutY="75.0" prefHeight="0.0" prefWidth="150.0" />
-                  <Label layoutX="31.0" layoutY="75.0" prefHeight="25.0" prefWidth="212.0" text="Escolha o meio de transporte:">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="56.0" layoutY="130.0" prefHeight="25.0" prefWidth="226.0" text="Média de quilometragem mensal:">
-                     <font>
-                        <Font name="Arial" size="15.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtPublico" layoutX="291.0" layoutY="130.0" prefHeight="25.0" prefWidth="86.0" />
-                  <Label layoutX="393.0" layoutY="130.0" prefHeight="25.0" prefWidth="36.0" text="Km" />
-               </children>
-            </Pane>
-            <Label fx:id="lblResultPublico" alignment="CENTER" layoutX="139.0" layoutY="409.0" prefHeight="17.0" prefWidth="212.0" text="0.0 KG de CO2 por ano" />
-            <Button fx:id="btnResultPublico" layoutX="184.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="25.0" prefWidth="123.0" text="Calcular pegada!">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="430.0" prefWidth="236.0" style="-fx-background-color: #33FF33;">
