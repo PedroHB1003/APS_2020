@@ -1,0 +1,30 @@
+.button:hover {
+    -fx-background-color: #66FF66;
+}
+.button {
+    -fx-background-color:  #00FF00;
+}
+.button:focused {
+    -fx-background-color:  #66FF66;
+}
+
+
+.calcular {
+    -fx-background-color: #A0A0A0;
+}
+.calcular:hover {
+    -fx-background-color: #C0C0C0;
+}
+.calcular:focused {
+    -fx-background-color:  #A0A0A0;
+}
+
+.reset {
+    -fx-background-color: #FF3333;
+}
+.reset:hover {
+    -fx-background-color: #FF9999;
+}
+.reset:focused {
+    -fx-background-color:  #FF3333;
+}
